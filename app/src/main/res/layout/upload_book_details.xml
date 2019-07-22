@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/common_google_signin_btn_text_dark_disabled"
+            android:fontFamily="sans-serif"
+            android:text="@string/upload_book_text_header"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="normal|bold" />
+
+        <EditText
+            android:id="@+id/book_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:ems="10"
+            android:hint="@string/text_bookname"
+            android:inputType="textPersonName"
+            android:textAlignment="center" />
+
+        <Spinner
+            android:id="@+id/branch_upload_spinner"
+            style="@style/Widget.AppCompat.Spinner.Underlined"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp" />
+
+        <EditText
+            android:id="@+id/quantity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:ems="10"
+            android:hint="@string/text_quantity"
+            android:inputType="number"
+            android:textAlignment="center"
+            android:visibility="gone" />
+
+        <EditText
+            android:id="@+id/owner_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:ems="10"
+            android:hint="@string/text_owner"
+            android:inputType="textPersonName"
+            android:textAlignment="center" />
+
+        <EditText
+            android:id="@+id/hostel_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:ems="10"
+            android:hint="@string/text_hostel"
+            android:inputType="textPersonName"
+            android:textAlignment="center"
+            android:visibility="gone" />
+
+        <EditText
+            android:id="@+id/room_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:ems="10"
+            android:hint="@string/text_roomNo"
+            android:inputType="number"
+            android:textAlignment="center"
+            android:visibility="gone" />
+
+        <EditText
+            android:id="@+id/contact_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:ems="10"
+            android:hint="@string/text_contacts"
+            android:inputType="number"
+            android:maxLength="10"
+            android:textAlignment="center" />
+
+        <Button
+            android:id="@+id/bookDetails_submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_vertical_margin"
+            android:layout_marginRight="@dimen/activity_vertical_margin"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorPrimary"
+            android:text="@string/submit"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+</ScrollView>

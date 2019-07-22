@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.desire.powwow">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <application
+        android:allowBackup="true"
+        android:hardwareAccelerated="false"
+        android:icon="@mipmap/logo_noshadow"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:windowSoftInputMode="adjustNothing"
+        tools:ignore="AllowBackup,GoogleAppIndexingWarning">
+        <activity
+            android:name=".authentication.SplashScrActivity"
+            android:theme="@style/AppThemeNoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".authentication.RegistrationActivity"
+            android:noHistory="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNoActionBar" />
+        <activity
+            android:name=".authentication.LoginActivity"
+            android:noHistory="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNoActionBar" />
+        <activity
+            android:name=".authentication.PWresetActivity"
+            android:noHistory="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNoActionBar" />
+
+        <activity
+            android:name=".Upload"
+            android:label="Upload Files" />
+        <activity
+            android:name=".Home"
+            android:label="@string/title_activity_home"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".DiscussionSubmit"
+            android:label="Create New Discussion"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity
+            android:name=".Download"
+            android:label="Download Files" />
+        <activity
+            android:name=".Forum"
+            android:label="Forum"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity
+            android:name=".ShareBook"
+            android:label="Suggest Book" />
+        <activity
+            android:name=".DiscussionScreen"
+            android:label="Discussions"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity
+            android:name=".BooksCategory"
+            android:label="Shared Books" />
+        <activity
+            android:name=".News.NewsMainActivity"
+            android:label="News"
+            tools:ignore="InnerclassSeparator" />
+        <!-- <activity
+             android:username=".Login"
+             android:label="Login"
+             android:launchMode="singleTop"
+             android:noHistory="true"
+             android:screenOrientation="portrait"
+             android:theme="@style/TranslucentBackground" />
+         <activity
+             android:username=".Register"
+             android:label="Register"
+             android:launchMode="singleTop"
+             android:noHistory="true"
+             android:screenOrientation="portrait"
+             android:theme="@style/Translucent" />-->
+
+        <!-- App Widget -->
+        <receiver
+            android:name=".DiscussionWidgetProvider"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="com.udacity.stockhawk.ACTION_DATA_UPDATED" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_description" />
+        </receiver>
+
+        <service
+            android:name=".DiscussionWidgetRemoteViewService"
+            android:exported="false"
+            android:permission="android.permission.BIND_REMOTEVIEWS" />
+
+        <activity
+            android:name="com.google.android.gms.ads.AdActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+            android:theme="@android:style/Theme.Translucent" />
+
+        <meta-data
+            android:name="com.google.android.gms.ads.AD_MANAGER_APP"
+            android:value="true" />
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/logo_noshadow" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorAccent" />
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_channel_id"
+            android:value="@string/default_notification_channel_id" />
+
+        <activity
+            android:name=".Chat.ChatActivity"
+            android:configChanges="keyboardHidden|screenSize|smallestScreenSize|screenLayout|orientation"
+            android:launchMode="singleTop"
+            android:theme="@style/generalnotitle"
+            android:windowSoftInputMode="adjustResize"
+            tools:ignore="InnerclassSeparator" />
+        <activity
+            android:name=".QuizPK.Quiz"
+            android:label="Quiz"
+            tools:ignore="InnerclassSeparator" />
+        <activity
+            android:name=".QuizPK.Result"
+            android:label="Results"
+            tools:ignore="InnerclassSeparator" />
+
+        <service
+            android:name=".Notifications.MyFirebaseMessagingService"
+            tools:ignore="ExportedService,InnerclassSeparator">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>

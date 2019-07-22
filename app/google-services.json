@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "249472722131",
+    "firebase_url": "https://powwow-fac7a.firebaseio.com",
+    "project_id": "powwow-fac7a",
+    "storage_bucket": "powwow-fac7a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:249472722131:android:fe93d1adfbc0c403",
+        "android_client_info": {
+          "package_name": "com.desire.powwow"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "249472722131-oc2tkie2eo7lsb615lar78g2okvsi0fm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDp2QHh-8mr1vlX7ccm1URi__njUd3KWh8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

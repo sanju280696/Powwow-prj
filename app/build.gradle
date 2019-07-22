@@ -1,0 +1,62 @@
+apply plugin: 'com.android.application'
+
+android {
+    signingConfigs {
+        config {
+            keyAlias 'Bonding'
+            keyPassword '123456'
+            storeFile file('../keystore.jks')
+            storePassword '123456'
+        }
+    }
+    compileSdkVersion 28
+    buildToolsVersion '28.0.3'
+    defaultConfig {
+        applicationId "com.desire.powwow"
+        minSdkVersion 16
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
+        }
+    }
+}
+
+dependencies {
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    //noinspection GradleCompatible
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.google.firebase:firebase-storage:16.1.0'
+    implementation 'com.google.firebase:firebase-auth:16.1.0'
+    implementation 'com.google.firebase:firebase-database:16.1.0'
+    implementation 'com.google.firebase:firebase-core:16.0.7'
+    implementation 'com.android.support:design:28.0.0'
+    testImplementation 'junit:junit:4.12'
+    implementation 'com.google.code.gson:gson:2.8.2'
+    implementation 'com.android.support:support-v4:28.0.0'
+    implementation 'com.amulyakhare:com.amulyakhare.textdrawable:1.0.1'
+    implementation 'com.google.android.gms:play-services-appindexing:9.8.0'
+    implementation 'com.google.android.gms:play-services-ads:17.1.3'
+    implementation 'com.google.android.gms:play-services-analytics:16.0.7'
+    implementation 'com.google.firebase:firebase-messaging:17.4.0'
+    implementation 'com.firebase:firebase-client-android:2.5.2'
+    implementation 'com.github.lzyzsd:circleprogress:1.2.1'
+    implementation 'com.android.support:multidex:1.0.3'
+    //Timer
+    implementation 'ir.samanjafari.easycountdowntimer:easycountdowntimer:2.1'
+    //progressbar
+    implementation 'com.github.castorflex.smoothprogressbar:library:1.1.0'
+
+}
+apply plugin: 'com.google.gms.google-services'
