@@ -1,5 +1,4 @@
-# Capstone-Project-Bonding
-Udacity Android Nanodegree Capstone Project
+# Powwow
 
 # Introduction
 
@@ -23,14 +22,3 @@ The prime objective of this android application software is to create a full-fle
 
 - AdMob
 - Analytics
-
-# Screenshots
-
-<img src="img/Screenshot_2017-03-05-13-43-16.jpg" height="500" width="300"> <img src="img/Screenshot_2017-03-05-13-43-32.jpg" height="500" width="300"> 
-
-<img src="img/Screenshot_2017-03-05-13-43-51.jpg" height="500" width="300"> <img src="img/Screenshot_2017-03-05-13-43-59.jpg" height="500" width="300">
-
-<img src="img/Screenshot_2017-03-05-13-44-07.jpg" height="500" width="300"> <img src="img/Screenshot_2017-03-05-13-44-17.jpg" height="500" width="300">
-
-<img src="img/Screenshot_2017-03-05-13-44-25.jpg" height="500" width="300"> <img src="img/Screenshot_2017-03-05-13-44-34.jpg" height="500" width="300"> 
-<img src="img/Screenshot_2017-03-05-13-45-52.jpg" height="500" width="300">
